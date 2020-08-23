@@ -1,0 +1,139 @@
+<ion-header color='primary'>
+  <ion-toolbar>
+    <ion-title>Selected Paper</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-grid>
+
+    <ion-row>
+
+      <ion-col size-lg=900 offset-lg=150 size-sm=1000 offset-sm=100 size=1100 offset=50>
+        
+        <ion-text class="ion-text-center">
+          <h1 class="bold">
+            Audio samples from "Generating Natural and Diverse Text-to-Speech Samples Using A Quantized Fine-grained VAE and Auto-regressive Prosody Prior"
+          </h1>
+        </ion-text>
+
+      </ion-col>
+
+
+    </ion-row>
+
+    <ion-row>
+
+      <ion-col size-lg=900 offset-lg=150 size-sm=1000 offset-sm=100 size=1100 offset=50>
+        
+        <ion-text class="ion-text-center">
+          <p><strong>Authors:</strong> Guangzhi Sun, Yu Zhang, Ron J. Weiss, Yuan Cao, Heiga Zen, Andrew Rosenberg, Bhuvana Ramabhadran, Yonghui Wu</p> 
+        </ion-text>
+
+      </ion-col>
+
+
+    </ion-row>
+
+
+    <ion-row>
+
+      <ion-col size-lg=900 offset-lg=150 size-sm=1000 offset-sm=100 size=1100 offset=50>
+        
+        <ion-text class="ion-text-center">
+          <p><strong>Abstract:</strong>
+            A text-to-speech synthesis system typically consists of multiple stages, such as a text analysis frontend, an acoustic model and an audio synthesis module. Building these components often requires extensive domain expertise and may contain brittle design choices. In this paper, we present Tacotron, an end-to-end generative text-to-speech model that synthesizes speech directly from characters. Given &lt;text, audio&gt; pairs, the model can be trained completely from scratch with random initialization. We present several key techniques to make the sequence-to-sequence framework perform well for this challenging task. Tacotron achieves a 3.82 subjective 5-scale mean opinion score on US English, outperforming a production parametric system in terms of naturalness. In addition, since Tacotron generates speech at the frame level, it's substantially faster than sample-level autoregressive methods.
+          </p> 
+        </ion-text>
+
+      </ion-col>
+
+
+    </ion-row>
+
+    
+
+
+    <ion-row>
+      <ion-col size-xl=300 offset-xl=275 size-lg=150 offset-lg=325 size-md=200 offset-md=300 size=250 offset=225>
+        <ion-button color='danger' class="fw">
+          Go back to other versions
+        </ion-button>
+      </ion-col>
+
+      
+      <ion-col size-xl=300 offset-xl=50 size-lg=150 offset-lg=150 size-md=200 offset-md=200 size=250 offset=250>
+        <ion-button color='success' class="fw">
+          Go to arxiv
+        </ion-button>
+      </ion-col>
+
+    </ion-row>
+
+
+    <ion-row *ngFor="let voice of voices" >
+
+      <ion-col size-lg=900 offset-lg=150 size-sm=1000 offset-sm=100 size=1100 offset=50>
+        
+        <ion-card class="ion-text-center">
+
+          <ion-card-header>
+            <ion-card-title>
+              Tacotron learns pronunciations based on phrase semantics.
+            </ion-card-title>
+            <ion-card-subtitle>
+              (Note how Tacotron pronounces "read" in the two phrases.)
+            </ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+
+            <ion-grid>
+              
+              <ion-row>
+
+                <ion-col size-xl=300 offset-xl=275 size-lg=150 offset-lg=325 size-md=200 offset-md=300 size=250 offset=225>
+                  <ion-text>
+                    <i>
+                      “He has read the whole thing.”
+                    </i>
+                  </ion-text>
+                  <audio controls class="fw">
+                    <source src="horse.ogg" type="audio/ogg">
+                        Your browser does not support the audio element.
+                  </audio>
+                </ion-col>
+          
+                
+                <ion-col size-xl=300 offset-xl=50 size-lg=150 offset-lg=150 size-md=200 offset-md=200 size=250 offset=250>
+                  <ion-text>
+                    <i>
+                      “He reads books.”
+                    </i>
+                  </ion-text>
+                  <audio controls class="fw">
+                    <source src="horse.ogg" type="audio/ogg">
+                        Your browser does not support the audio element.
+                  </audio>
+                </ion-col>
+
+              </ion-row>
+
+            </ion-grid>
+          </ion-card-content>
+
+        </ion-card>
+
+      </ion-col>
+
+
+    </ion-row>
+
+
+
+
+  </ion-grid>
+
+
+</ion-content>

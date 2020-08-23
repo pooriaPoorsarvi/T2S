@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>List of papers</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-grid>
+
+
+    <ion-row>
+      <ion-col size-xl=100 offset-xl=450 size-lg=150 offset-lg=325 size-md=200 offset-md=300 size=250 offset=225>
+        <ion-img src = 'assets/taco.png'></ion-img>
+      </ion-col>
+
+      
+      <ion-col size-xl=100 offset-xl=100 size-lg=150 offset-lg=150 size-md=200 offset-md=200 size=250 offset=250>
+        <ion-img src = 'assets/tron.png'></ion-img>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+
+      <ion-col size=800 offset=200>
+        <ion-text class="ion-text-center bold">
+            <h1 class="bold">
+              Tacotron (/täkōˌträn/): An end-to-end speech synthesis system by Google
+            </h1>
+        </ion-text>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+
+      <ion-col size=800 offset=200>
+        <ion-text class="ion-text-center">
+            <h1>
+              <i>Publications:</i> 
+            </h1>
+        </ion-text>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+
+      <ion-col size-xl=900 offset-xl=150 size-lg=950 offset-lg=125 size-md=1000 offset-md=100 size=1100 offset=50>
+
+        <ion-list>
+          <ion-item *ngFor ='let version of versions; let i = index' detail 
+          class = "ion-text-wrap" text-wrap
+          [routerLink] = "['/', 'home', 'tabs', 'detail']"
+          >
+          <ion-thumbnail slot="start">
+              <ion-img [src]="i % 2 == 0 ? 'assets/taco.png' : 'assets/tron.png'"></ion-img>
+            </ion-thumbnail>
+            <ion-label class = "ion-text-wrap" text-wrap>
+              <h1>Uncovering Latent Style Factors for Expressive Speech Synthesis</h1>
+              <p>{{'2019-09-01' | date}}</p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+
+      </ion-col>
+
+    </ion-row>
+
+
+  </ion-grid>
+
+
+
+</ion-content>
