@@ -58,16 +58,19 @@
 
     <ion-row>
       <ion-col size-lg=300 offset-lg=275 size=1000 offset=100>
-        <ion-button color='danger' class = "fw ion-text-wrap" text-wrap>
+        <ion-button color='danger' class = "fw ion-text-wrap" text-wrap
+        [routerLink]="['/', 'home', 'tabs', 'examples']">
           Go back to other versions
         </ion-button>
       </ion-col>
 
       
       <ion-col size-lg=300 offset-lg=50  size=1000 offset=100>
+        <a href='https://arxiv.org/abs/2002.03785'>
         <ion-button color='success' class = "fw ion-text-wrap" text-wrap>
           Go to arxiv
         </ion-button>
+        </a>
       </ion-col>
 
     </ion-row>
